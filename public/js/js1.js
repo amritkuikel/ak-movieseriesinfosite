@@ -3,10 +3,10 @@ const playholder = document.getElementsByClassName('playholder')
 function playmgr(a){
         const btn1TA = document.querySelector('.btn1T')
         if(btn1T.style.color=='white'){
-            fetch('http://localhost:3000/popularMovie2').then((response)=>{
+            fetch('/popularMovie2').then((response)=>{
                 response.json().then((data)=>{
                     const id= data[a].id
-                    fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(id)).then((response)=>{
+                    fetch('/vidinfoM?id='+encodeURIComponent(id)).then((response)=>{
                     response.json().then((data1)=>{
                         if(data1[0]==null){
                             return document.getElementsByClassName('textplay')[a].innerHTML="Can Not play"
@@ -21,10 +21,10 @@ function playmgr(a){
             })
         }
         else{
-            fetch('http://localhost:3000/popularTv2').then((response)=>{
+            fetch('/popularTv2').then((response)=>{
         response.json().then((data)=>{
             const id= data[a].id
-            fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(id)).then((response)=>{
+            fetch('/vidinfo?id='+encodeURIComponent(id)).then((response)=>{
             response.json().then((data1)=>{
                 if(data1[0]==null){
                     return document.getElementsByClassName('textplay')[a].innerHTML="Can Not play"

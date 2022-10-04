@@ -11,6 +11,7 @@ const popularTv2 = utils.popularTv2
 const vidinfo = utils.vidinfo
 const vidinfoM = utils.vidinfoM
 const popularMovie2 = utils.popularMovie2
+const port = port.env.PORT || 3000
 
 const app = express()
 
@@ -79,6 +80,7 @@ app.get('/popularMovie2',(req,res)=>{
 })
 
 
-app.listen(3000,()=>{
+
+app.listen(port,()=>{
     console.log('server initiated')
 })

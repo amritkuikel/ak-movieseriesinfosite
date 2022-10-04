@@ -4,13 +4,13 @@ const query = document.querySelector('#query')
 click.addEventListener('submit',(e)=>{
     e.preventDefault()
     const searchTerm = query.value
-    fetch('http://localhost:3000/searchMovie?searchTerm='+encodeURIComponent(searchTerm)).then((response)=>{
+    fetch('/searchMovie?searchTerm='+encodeURIComponent(searchTerm)).then((response)=>{
     response.json().then((data)=>{
         console.log(data)
     })
     })
 })
-fetch('http://localhost:3000/popularMovie').then((response)=>{
+fetch('/popularMovie').then((response)=>{
     response.json().then((data)=>{
         const popularMovie = data
         const randomno = Math.floor(Math.random()*20)
@@ -19,7 +19,7 @@ fetch('http://localhost:3000/popularMovie').then((response)=>{
         document.querySelector('header').style.backgroundImage=`url('${imgurl}')`
     })
 })
-fetch('http://localhost:3000/popularTv').then((response)=>{
+fetch('/popularTv').then((response)=>{
     response.json().then((data)=>{
          for(var i=0;i<20;i++){
                 const imagetv= data[i].poster_path
@@ -39,7 +39,7 @@ fetch('http://localhost:3000/popularTv').then((response)=>{
         }
     })
     })
-fetch('http://localhost:3000/popularTv2').then((response)=>{
+fetch('/popularTv2').then((response)=>{
     response.json().then((data)=>{
         const containerimgurl = 'https://image.tmdb.org/t/p/original'+encodeURIComponent(data[0].backdrop_path)
         document.getElementsByClassName('overlayT')[0].style.backgroundImage=`url('${containerimgurl}')`
@@ -57,7 +57,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
             const nametvT= data[i].name
             document.getElementsByClassName('nametvT')[i].innerHTML=nametvT    
             }
-        fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[0].id)).then((response)=>{
+        fetch('/vidinfo?id='+encodeURIComponent(data[0].id)).then((response)=>{
         response.json().then((data3)=>{
             if(data3.length==0){
                 return document.getElementsByClassName('vidinfo')[0].innerHTML= 'Unavailable'
@@ -66,7 +66,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[0].innerHTML= vidinfo 
             })
             })
-            fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[1].id)).then((response)=>{
+            fetch('/vidinfo?id='+encodeURIComponent(data[1].id)).then((response)=>{
                 response.json().then((data)=>{
                 if(data.length==0){
                     return document.getElementsByClassName('vidinfo')[1].innerHTML= 'Unavailable'
@@ -75,7 +75,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[0].innerHTML= vidinfo 
                 })
                 })
-         fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[2].id)).then((response)=>{
+         fetch('/vidinfo?id='+encodeURIComponent(data[2].id)).then((response)=>{
         response.json().then((data3)=>{
             if(data3.length==0){
                 return document.getElementsByClassName('vidinfo')[2].innerHTML= 'Unavailable'
@@ -84,7 +84,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[2].innerHTML= vidinfo 
             })
             })
-        fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[3].id)).then((response)=>{
+        fetch('/vidinfo?id='+encodeURIComponent(data[3].id)).then((response)=>{
         response.json().then((data3)=>{
             if(data3.length==0){
                 return document.getElementsByClassName('vidinfo')[3].innerHTML= 'Unavailable'
@@ -93,7 +93,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[3].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[4].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[4].id)).then((response)=>{
         response.json().then((data3)=>{
             if(data3.length==0){
                 return document.getElementsByClassName('vidinfo')[4].innerHTML= 'Unavailable'
@@ -102,7 +102,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[4].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[5].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[5].id)).then((response)=>{
         response.json().then((data2)=>{
             if(data2.length==0){
                 return document.getElementsByClassName('vidinfo')[5].innerHTML= 'Unavailable'
@@ -111,7 +111,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[5].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[6].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[6].id)).then((response)=>{
         response.json().then((data2)=>{
             if(data2.length==0){
                 return document.getElementsByClassName('vidinfo')[6].innerHTML= 'Unavailable'
@@ -120,7 +120,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[6].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[7].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[7].id)).then((response)=>{
         response.json().then((data2)=>{
             if(data2.length==0){
                 return document.getElementsByClassName('vidinfo')[7].innerHTML= 'Unavailable'
@@ -129,7 +129,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[7].innerHTML= vidinfo 
             })
             })
-                   fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[8].id)).then((response)=>{
+                   fetch('/vidinfo?id='+encodeURIComponent(data[8].id)).then((response)=>{
         response.json().then((data3)=>{
             if(data3.length==0){
                 return document.getElementsByClassName('vidinfo')[8].innerHTML= 'Unavailable'
@@ -138,7 +138,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[8].innerHTML= vidinfo 
             })
             })
-         fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[9].id)).then((response)=>{
+         fetch('/vidinfo?id='+encodeURIComponent(data[9].id)).then((response)=>{
         response.json().then((data3)=>{
             if(data3.length==0){
                 return document.getElementsByClassName('vidinfo')[9].innerHTML= 'Unavailable'
@@ -147,7 +147,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[9].innerHTML= vidinfo 
             })
             })
-         fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[10].id)).then((response)=>{
+         fetch('/vidinfo?id='+encodeURIComponent(data[10].id)).then((response)=>{
         response.json().then((data3)=>{
             if(data3.length==0){
                 return document.getElementsByClassName('vidinfo')[10].innerHTML= 'Unavailable'
@@ -156,7 +156,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[10].innerHTML= vidinfo 
             })
             })
-        fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[11].id)).then((response)=>{
+        fetch('/vidinfo?id='+encodeURIComponent(data[11].id)).then((response)=>{
         response.json().then((data3)=>{
             if(data3.length==0){
                 return document.getElementsByClassName('vidinfo')[11].innerHTML= 'Unavailable'
@@ -165,7 +165,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[11].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[12].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[12].id)).then((response)=>{
         response.json().then((data3)=>{
             if(data3.length==0){
                 return document.getElementsByClassName('vidinfo')[12].innerHTML= 'Unavailable'
@@ -174,7 +174,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[12].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[13].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[13].id)).then((response)=>{
         response.json().then((data3)=>{
             if(data3.length==0){
                 return document.getElementsByClassName('vidinfo')[13].innerHTML= 'Unavailable'
@@ -183,7 +183,7 @@ fetch('http://localhost:3000/popularTv2').then((response)=>{
                 document.getElementsByClassName('vidinfo')[13].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[14].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[14].id)).then((response)=>{
         response.json().then((data3)=>{
             if(data3.length==0){
                 return document.getElementsByClassName('vidinfo')[14].innerHTML= 'Unavailable'

@@ -6,7 +6,7 @@ btn2.addEventListener('click',()=>{
     btn1.style.color='rgb(0, 0, 0)'
     btn2.style.backgroundColor='rgb(3,37,65)'
     btn2.style.color='aqua'
-    fetch('http://localhost:3000/nowPlayingMovie ').then((response)=>{
+    fetch('/nowPlayingMovie ').then((response)=>{
         response.json().then((data)=>{
              for(var i=0;i<20;i++){
                     const imagetv= data[i].poster_path
@@ -33,7 +33,7 @@ btn1.addEventListener('click',()=>{
     btn2.style.color='rgb(0, 0, 0)'
     btn1.style.backgroundColor='rgb(3,37,65)'
     btn1.style.color='aqua'
-    fetch('http://localhost:3000/popularTv').then((response)=>{
+    fetch('/popularTv').then((response)=>{
     response.json().then((data)=>{
          for(var i=0;i<20;i++){
                 const imagetv= data[i].poster_path
@@ -56,7 +56,7 @@ btn1.addEventListener('click',()=>{
    
 })
 function imageFind(i){
-    fetch('http://localhost:3000/popularTv2').then((response)=>{
+    fetch('/popularTv2').then((response)=>{
         response.json().then((data)=>{
             if(data[i].backdrop_path==null){
                 const containerimgurl = 'https://image.tmdb.org/t/p/original'+encodeURIComponent(data[i].poster_path)

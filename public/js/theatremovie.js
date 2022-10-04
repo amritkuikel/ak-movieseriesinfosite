@@ -7,7 +7,7 @@ btn2T.addEventListener('click',()=>{
     btn2T.style.backgroundColor='rgb(7, 134, 98'
     btn2T.style.color='rgb(0, 0, 0)'
     document.getElementsByClassName('playholder')[0].className= document.getElementsByClassName('playholder')[0].className.replace('playholder','playholder2')
-    fetch('http://localhost:3000/popularMovie2').then((response)=>{
+    fetch('/popularMovie2').then((response)=>{
         response.json().then((data)=>{
         const containerimgurl = 'https://image.tmdb.org/t/p/original'+encodeURIComponent(data[0].backdrop_path)
         document.getElementsByClassName('overlayT')[0].style.backgroundImage=`url('${containerimgurl}')`
@@ -25,7 +25,7 @@ btn2T.addEventListener('click',()=>{
             const nametvT= data[i].title
             document.getElementsByClassName('nametvT')[i].innerHTML=nametvT    
             }
-        fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[0].id)).then((response)=>{
+        fetch('/vidinfoM?id='+encodeURIComponent(data[0].id)).then((response)=>{
             response.json().then((data3)=>{
             if(data3.length==0){
                 return document.getElementsByClassName('vidinfo')[0].innerHTML= 'Unavailable'
@@ -34,7 +34,7 @@ btn2T.addEventListener('click',()=>{
             document.getElementsByClassName('vidinfo')[0].innerHTML= vidinfo 
             })
             })
-         fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[1].id)).then((response)=>{
+         fetch('/vidinfoM?id='+encodeURIComponent(data[1].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[1].innerHTML= 'Unavailable'
@@ -43,7 +43,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[1].innerHTML= vidinfo 
             })
             })
-         fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[2].id)).then((response)=>{
+         fetch('/vidinfoM?id='+encodeURIComponent(data[2].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[2].innerHTML= 'Unavailable'
@@ -52,7 +52,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[2].innerHTML= vidinfo 
             })
             })
-        fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[3].id)).then((response)=>{
+        fetch('/vidinfoM?id='+encodeURIComponent(data[3].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[3].innerHTML= 'Unavailable'
@@ -61,7 +61,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[3].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[4].id)).then((response)=>{
+    fetch('/vidinfoM?id='+encodeURIComponent(data[4].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[4].innerHTML= 'Unavailable'
@@ -70,7 +70,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[4].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[5].id)).then((response)=>{
+    fetch('/vidinfoM?id='+encodeURIComponent(data[5].id)).then((response)=>{
         response.json().then((data2)=>{
             if(data2.length==0){
                 return document.getElementsByClassName('vidinfo')[5].innerHTML= 'Unavailable'
@@ -79,7 +79,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[5].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[6].id)).then((response)=>{
+    fetch('/vidinfoM?id='+encodeURIComponent(data[6].id)).then((response)=>{
         response.json().then((data2)=>{
             if(data2.length==0){
                 return document.getElementsByClassName('vidinfo')[6].innerHTML= 'Unavailable'
@@ -88,7 +88,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[6].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[7].id)).then((response)=>{
+    fetch('/vidinfoM?id='+encodeURIComponent(data[7].id)).then((response)=>{
         response.json().then((data2)=>{
             if(data2.length==0){
                 return document.getElementsByClassName('vidinfo')[7].innerHTML= 'Unavailable'
@@ -97,7 +97,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[7].innerHTML= vidinfo 
             })
             })
-                   fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[8].id)).then((response)=>{
+                   fetch('/vidinfoM?id='+encodeURIComponent(data[8].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[8].innerHTML= 'Unavailable'
@@ -106,7 +106,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[8].innerHTML= vidinfo 
             })
             })
-         fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[9].id)).then((response)=>{
+         fetch('/vidinfoM?id='+encodeURIComponent(data[9].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[9].innerHTML= 'Unavailable'
@@ -115,7 +115,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[9].innerHTML= vidinfo 
             })
             })
-         fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[10].id)).then((response)=>{
+         fetch('/vidinfoM?id='+encodeURIComponent(data[10].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[10].innerHTML= 'Unavailable'
@@ -124,7 +124,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[10].innerHTML= vidinfo 
             })
             })
-        fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[11].id)).then((response)=>{
+        fetch('/vidinfoM?id='+encodeURIComponent(data[11].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[11].innerHTML= 'Unavailable'
@@ -133,7 +133,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[11].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[12].id)).then((response)=>{
+    fetch('/vidinfoM?id='+encodeURIComponent(data[12].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[12].innerHTML= 'Unavailable'
@@ -142,7 +142,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[12].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[13].id)).then((response)=>{
+    fetch('/vidinfoM?id='+encodeURIComponent(data[13].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[13].innerHTML= 'Unavailable'
@@ -151,7 +151,7 @@ btn2T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[13].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfoM?id='+encodeURIComponent(data[14].id)).then((response)=>{
+    fetch('/vidinfoM?id='+encodeURIComponent(data[14].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[14].innerHTML= 'Unavailable'
@@ -169,7 +169,7 @@ btn1T.addEventListener('click',()=>{
     btn2T.style.color='white'
     btn1T.style.backgroundColor='rgb(7, 134, 98'
     btn1T.style.color='rgb(0, 0, 0)'
-    fetch('http://localhost:3000/popularTv2').then((response)=>{
+    fetch('/popularTv2').then((response)=>{
         response.json().then((data)=>{
         const containerimgurl = 'https://image.tmdb.org/t/p/original'+encodeURIComponent(data[0].backdrop_path)
         document.getElementsByClassName('overlayT')[0].style.backgroundImage=`url('${containerimgurl}')`
@@ -187,7 +187,7 @@ btn1T.addEventListener('click',()=>{
             const nametvT= data[i].name
             document.getElementsByClassName('nametvT')[i].innerHTML=nametvT    
             }
-        fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[0].id)).then((response)=>{
+        fetch('/vidinfo?id='+encodeURIComponent(data[0].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[0].innerHTML= 'Unavailable'
@@ -196,7 +196,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[0].innerHTML= vidinfo 
             })
             })
-         fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[1].id)).then((response)=>{
+         fetch('/vidinfo?id='+encodeURIComponent(data[1].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[1].innerHTML= 'Unavailable'
@@ -205,7 +205,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[1].innerHTML= vidinfo 
             })
             })
-         fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[2].id)).then((response)=>{
+         fetch('/vidinfo?id='+encodeURIComponent(data[2].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[2].innerHTML= 'Unavailable'
@@ -214,7 +214,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[2].innerHTML= vidinfo 
             })
             })
-        fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[3].id)).then((response)=>{
+        fetch('/vidinfo?id='+encodeURIComponent(data[3].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[3].innerHTML= 'Unavailable'
@@ -223,7 +223,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[3].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[4].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[4].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[4].innerHTML= 'Unavailable'
@@ -232,7 +232,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[4].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[5].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[5].id)).then((response)=>{
         response.json().then((data2)=>{
             if(data2.length==0){
                 return document.getElementsByClassName('vidinfo')[5].innerHTML= 'Unavailable'
@@ -241,7 +241,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[5].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[6].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[6].id)).then((response)=>{
         response.json().then((data2)=>{
             if(data2.length==0){
                 return document.getElementsByClassName('vidinfo')[6].innerHTML= 'Unavailable'
@@ -250,7 +250,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[6].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[7].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[7].id)).then((response)=>{
         response.json().then((data2)=>{
             if(data2.length==0){
                 return document.getElementsByClassName('vidinfo')[7].innerHTML= 'Unavailable'
@@ -259,7 +259,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[7].innerHTML= vidinfo 
             })
             })
-                   fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[8].id)).then((response)=>{
+                   fetch('/vidinfo?id='+encodeURIComponent(data[8].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[8].innerHTML= 'Unavailable'
@@ -268,7 +268,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[8].innerHTML= vidinfo 
             })
             })
-         fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[9].id)).then((response)=>{
+         fetch('/vidinfo?id='+encodeURIComponent(data[9].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[9].innerHTML= 'Unavailable'
@@ -277,7 +277,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[9].innerHTML= vidinfo 
             })
             })
-         fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[10].id)).then((response)=>{
+         fetch('/vidinfo?id='+encodeURIComponent(data[10].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[10].innerHTML= 'Unavailable'
@@ -286,7 +286,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[10].innerHTML= vidinfo 
             })
             })
-        fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[11].id)).then((response)=>{
+        fetch('/vidinfo?id='+encodeURIComponent(data[11].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[11].innerHTML= 'Unavailable'
@@ -295,7 +295,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[11].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[12].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[12].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[12].innerHTML= 'Unavailable'
@@ -304,7 +304,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[12].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[13].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[13].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[13].innerHTML= 'Unavailable'
@@ -313,7 +313,7 @@ btn1T.addEventListener('click',()=>{
                 document.getElementsByClassName('vidinfo')[13].innerHTML= vidinfo 
             })
             })
-    fetch('http://localhost:3000/vidinfo?id='+encodeURIComponent(data[14].id)).then((response)=>{
+    fetch('/vidinfo?id='+encodeURIComponent(data[14].id)).then((response)=>{
             response.json().then((data)=>{
             if(data.length==0){
                 return document.getElementsByClassName('vidinfo')[14].innerHTML= 'Unavailable'
