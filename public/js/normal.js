@@ -68,52 +68,155 @@ function imageFind(i){
         })
     })
 }
+function imageFind2(i){
+    fetch('/popularMovie2').then((response)=>{
+        response.json().then((data)=>{
+            if(data[i].backdrop_path==null){
+                const containerimgurl = 'https://image.tmdb.org/t/p/original'+encodeURIComponent(data[i].poster_path)
+                return document.getElementsByClassName('overlayT')[0].style.backgroundImage=`url('${containerimgurl}')`
+            }
+            const containerimgurl = 'https://image.tmdb.org/t/p/original'+encodeURIComponent(data[i].backdrop_path)
+            document.getElementsByClassName('overlayT')[0].style.backgroundImage=`url('${containerimgurl}')`
+             
+        })
+    })
+}
 
 const imagetvT = document.getElementsByClassName('imagetvT')
 imagetvT[0].addEventListener('mouseover',()=>{
-    imageFind('0')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('0')
+    }
+    else{
+        imageFind('0')
+    }
 })
 imagetvT[1].addEventListener('mouseover',()=>{
-    imageFind('1')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('1')
+    }
+    else{
+        imageFind('1')
+    }
 })
 imagetvT[2].addEventListener('mouseover',()=>{
-    imageFind('2')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('2')
+    }
+    else{
+        imageFind('2')
+    }
 })
 imagetvT[3].addEventListener('mouseover',()=>{
-    imageFind('3')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('3')
+    }
+    else{
+        imageFind('3')
+    }
 })
 imagetvT[4].addEventListener('mouseover',()=>{
-    imageFind('4')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('4')
+    }
+    else{
+        imageFind('4')
+    }
 })
 imagetvT[5].addEventListener('mouseover',()=>{
-    imageFind('5')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('5')
+    }
+    else{
+        imageFind('5')
+    }
 })
 imagetvT[6].addEventListener('mouseover',()=>{
-    imageFind('6')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('6')
+    }
+    else{
+        imageFind('6')
+    }
 })
 imagetvT[7].addEventListener('mouseover',()=>{
-    imageFind('7')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('7')
+    }
+    else{
+        imageFind('7')
+    }
 })
 imagetvT[8].addEventListener('mouseover',()=>{
-    imageFind('8')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('8')
+    }
+    else{
+        imageFind('8')
+    }
 })
 imagetvT[9].addEventListener('mouseover',()=>{
-    imageFind('9')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('9')
+    }
+    else{
+        imageFind('9')
+    }
 })
 imagetvT[10].addEventListener('mouseover',()=>{
-    imageFind('10')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('10')
+    }
+    else{
+        imageFind('10')
+    }
 })
 imagetvT[11].addEventListener('mouseover',()=>{
-    imageFind('11')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('11')
+    }
+    else{
+        imageFind('11')
+    }
 })
 imagetvT[12].addEventListener('mouseover',()=>{
-    imageFind('12')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('12')
+    }
+    else{
+        imageFind('12')
+    }
 })
 imagetvT[13].addEventListener('mouseover',()=>{
-    imageFind('13')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('13')
+    }
+    else{
+        imageFind('13')
+    }
 })
 imagetvT[14].addEventListener('mouseover',()=>{
-    imageFind('14')
+    const btn1TB = document.querySelector('.btn1T')
+    if(btn1TB.style.color=='white'){
+        imageFind2('14')
+    }
+    else{
+        imageFind('14')
+    }
 })
 
 

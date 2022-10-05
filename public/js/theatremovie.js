@@ -1,12 +1,13 @@
 const btn1T = document.querySelector('.btn1T')
 const btn2T = document.querySelector('.btn2T')
 btn2T.addEventListener('click',()=>{
-    document.getElementsByClassName('textplay')[0].innerHTML="Click To Play!"
+    for(i=0;i<15;i++){
+        document.getElementsByClassName('textplay')[i].innerHTML="Click To Play!"
+    }
     btn1T.style.backgroundColor='rgba(243, 229, 229, 0)'
     btn1T.style.color='white'
     btn2T.style.backgroundColor='rgb(7, 134, 98'
     btn2T.style.color='rgb(0, 0, 0)'
-    document.getElementsByClassName('playholder')[0].className= document.getElementsByClassName('playholder')[0].className.replace('playholder','playholder2')
     fetch('/popularMovie2').then((response)=>{
         response.json().then((data)=>{
         const containerimgurl = 'https://image.tmdb.org/t/p/original'+encodeURIComponent(data[0].backdrop_path)
@@ -164,7 +165,9 @@ btn2T.addEventListener('click',()=>{
     })
 })
 btn1T.addEventListener('click',()=>{
-    document.getElementsByClassName('textplay')[0].innerHTML="Click To Play!"
+    for(i=0;i<15;i++){
+        document.getElementsByClassName('textplay')[i].innerHTML="Click To Play!"
+    }
     btn2T.style.backgroundColor='rgba(243, 229, 229, 0)'
     btn2T.style.color='white'
     btn1T.style.backgroundColor='rgb(7, 134, 98'

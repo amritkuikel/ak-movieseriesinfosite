@@ -2,7 +2,7 @@ const playholder = document.getElementsByClassName('playholder')
 
 function playmgr(a){
         const btn1TA = document.querySelector('.btn1T')
-        if(btn1T.style.color=='white'){
+        if(btn1TA.style.color=='white'){
             fetch('/popularMovie2').then((response)=>{
                 response.json().then((data)=>{
                     const id= data[a].id
