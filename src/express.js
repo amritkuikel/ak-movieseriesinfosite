@@ -11,6 +11,8 @@ const popularTv2 = utils.popularTv2
 const vidinfo = utils.vidinfo
 const vidinfoM = utils.vidinfoM
 const popularMovie2 = utils.popularMovie2
+const latestToday = utils.latestToday
+const latestWeek = utils.latestWeek
 const port = process.env.PORT || 3000
 
 const app = express()
@@ -78,7 +80,16 @@ app.get('/popularMovie2',(req,res)=>{
         res.send(response)
     })
 })
-
+app.get('/latestToday',(req,res)=>{
+    latestToday((error,response)=>{
+        res.send(response)
+    })
+})
+app.get('/latestWeek',(req,res)=>{
+    latestWeek((error,response)=>{
+        res.send(response)
+    })
+})
 
 
 app.listen(port,()=>{

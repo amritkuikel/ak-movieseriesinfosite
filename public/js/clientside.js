@@ -39,6 +39,43 @@ fetch('/popularTv').then((response)=>{
         }
     })
     })
+fetch('/latestToday').then((response)=>{
+        response.json().then((data)=>{
+             for(var i=0;i<20;i++){
+                    const imagetv= data[i].poster_path
+                    document.getElementsByClassName('imagetvL')[i].src='https://image.tmdb.org/t/p/original'+encodeURIComponent(imagetv)
+            }
+            for(var i=0;i<20;i++){
+                const rating=(data[i].vote_average)
+                const a = Math.trunc(rating)
+                const b = rating*10
+                const c = Math.trunc(b%10)
+                document.getElementsByClassName('ratingL')[i].innerHTML=`${a}.${c}`
+            }
+            for(var i=0;i<20;i++){
+                if(data[i].title==null){
+                    const nametv= data[i].name
+                    document.getElementsByClassName('nametvL')[i].innerHTML=nametv
+                }
+                else{
+                    const nametv= data[i].title
+                    document.getElementsByClassName('nametvL')[i].innerHTML=nametv
+                }
+               
+            }
+            for(var i=0;i<20;i++){
+                if(data[i].title==null){
+                    const releasedatetv= data[i].first_air_date
+                    document.getElementsByClassName('releasedatetvL')[i].innerHTML=releasedatetv
+                }
+                else{
+                    const releasedatetv= data[i].release_date
+                document.getElementsByClassName('releasedatetvL')[i].innerHTML=releasedatetv
+                }
+                
+            }
+        })
+
 fetch('/popularTv2').then((response)=>{
     response.json().then((data)=>{
         const containerimgurl = 'https://image.tmdb.org/t/p/original'+encodeURIComponent(data[0].backdrop_path)
@@ -72,7 +109,7 @@ fetch('/popularTv2').then((response)=>{
                     return document.getElementsByClassName('vidinfo')[1].innerHTML= 'Unavailable'
                     }
                 const vidinfo = data[0].type
-                document.getElementsByClassName('vidinfo')[0].innerHTML= vidinfo 
+                document.getElementsByClassName('vidinfo')[1].innerHTML= vidinfo 
                 })
                 })
          fetch('/vidinfo?id='+encodeURIComponent(data[2].id)).then((response)=>{
@@ -194,3 +231,4 @@ fetch('/popularTv2').then((response)=>{
             })
     })
     })
+})

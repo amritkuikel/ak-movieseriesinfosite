@@ -57,4 +57,18 @@ const vidinfoM = (id,callback)=>{
     callback(undefined,json.results)
 })
 }
-module.exports = {searchMovie,popularMovie,popularTv,nowPlayingMovie,popularTv2,vidinfo,popularMovie2,vidinfoM}
+const latestToday = (callback)=>{
+    const urllatestToday = 'https://api.themoviedb.org/3/trending/all/day?api_key=ec8a74043584d6c450c2962f6a049d97'
+    request({url:urllatestToday},(error,response)=>{
+    const json =JSON.parse(response.body)
+    callback(undefined,json.results)
+})
+}
+const latestWeek = (callback)=>{
+    const urllatestWeek = 'https://api.themoviedb.org/3/trending/all/week?api_key=ec8a74043584d6c450c2962f6a049d97'
+    request({url:urllatestWeek},(error,response)=>{
+    const json =JSON.parse(response.body)
+    callback(undefined,json.results)
+})
+}
+module.exports = {searchMovie,popularMovie,popularTv,nowPlayingMovie,popularTv2,vidinfo,popularMovie2,vidinfoM,latestToday,latestWeek}

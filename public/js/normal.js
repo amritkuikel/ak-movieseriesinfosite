@@ -1,5 +1,7 @@
 const btn1 = document.querySelector('.btn1')
 const btn2 = document.querySelector('.btn2')
+const btn1L = document.querySelector('.btn1L')
+const btn2L = document.querySelector('.btn2L')
 
 btn2.addEventListener('click',()=>{
     btn1.style.backgroundColor='white'
@@ -27,6 +29,34 @@ btn2.addEventListener('click',()=>{
         })
         })
 })
+
+btn2L.addEventListener('click',()=>{
+    btn1L.style.backgroundColor='white'
+    btn1L.style.color='rgb(0, 0, 0)'
+    btn2L.style.backgroundColor='rgb(3,37,65)'
+    btn2L.style.color='aqua'
+    fetch('/nowPlayingMovie ').then((response)=>{
+        response.json().then((data)=>{
+             for(var i=0;i<20;i++){
+                    const imagetv= data[i].poster_path
+                    document.getElementsByClassName('imagetv')[i].src='https://image.tmdb.org/t/p/original'+encodeURIComponent(imagetv)
+            }
+            for(var i=0;i<20;i++){
+                const rating= data[i].vote_average
+                document.getElementsByClassName('rating')[i].innerHTML=rating
+            }
+            for(var i=0;i<20;i++){
+                const nametv= data[i].title
+                document.getElementsByClassName('nametv')[i].innerHTML=nametv
+            }
+            for(var i=0;i<20;i++){
+                const releasedatetv= data[i].release_date
+                document.getElementsByClassName('releasedatetv')[i].innerHTML=releasedatetv
+            }
+        })
+        })
+})
+
 
 btn1.addEventListener('click',()=>{
     btn2.style.backgroundColor='white'
