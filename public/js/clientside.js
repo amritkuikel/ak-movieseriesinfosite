@@ -79,6 +79,7 @@ fetch('/latestToday').then((response)=>{
 fetch('/popularTv2').then((response)=>{
     response.json().then((data)=>{
         const containerimgurl = 'https://image.tmdb.org/t/p/original'+encodeURIComponent(data[0].backdrop_path)
+        console.log(containerimgurl)
         document.getElementsByClassName('overlayT')[0].style.backgroundImage=`url('${containerimgurl}')`
         for(var i=0;i<15;i++){
             if(data[i].backdrop_path==null){

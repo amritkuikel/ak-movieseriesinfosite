@@ -107,15 +107,20 @@
     background-color: rgb(42, 114, 54);
     border-radius: 20px;
     background-image: url(../assests/cancel.png);
+    position: absolute;
+    top: 10px;
+    left: 0;
 }
 .cancelframe{
     margin-left: 130px;
     margin-top: -650px;
     position: relative; 
     background-color: rgba(230, 230, 236, 0);
-    display: flex;
 }
 .frame{
     display: none;
     background-color: brown;
+    position: absolute;
+    top: 10px;
+    left: 50px;
 }

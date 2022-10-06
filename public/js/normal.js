@@ -35,23 +35,55 @@ btn2L.addEventListener('click',()=>{
     btn1L.style.color='rgb(0, 0, 0)'
     btn2L.style.backgroundColor='rgb(3,37,65)'
     btn2L.style.color='aqua'
-    fetch('/nowPlayingMovie ').then((response)=>{
+    fetch('/latestWeek ').then((response)=>{
         response.json().then((data)=>{
              for(var i=0;i<20;i++){
                     const imagetv= data[i].poster_path
-                    document.getElementsByClassName('imagetv')[i].src='https://image.tmdb.org/t/p/original'+encodeURIComponent(imagetv)
+                    document.getElementsByClassName('imagetvL')[i].src='https://image.tmdb.org/t/p/original'+encodeURIComponent(imagetv)
             }
             for(var i=0;i<20;i++){
-                const rating= data[i].vote_average
-                document.getElementsByClassName('rating')[i].innerHTML=rating
+                const rating=(data[i].vote_average)
+                const a = Math.trunc(rating)
+                const b = rating*10
+                const c = Math.trunc(b%10)
+                document.getElementsByClassName('ratingL')[i].innerHTML=`${a}.${c}`
             }
             for(var i=0;i<20;i++){
                 const nametv= data[i].title
-                document.getElementsByClassName('nametv')[i].innerHTML=nametv
+                document.getElementsByClassName('nametvL')[i].innerHTML=nametv
             }
             for(var i=0;i<20;i++){
                 const releasedatetv= data[i].release_date
-                document.getElementsByClassName('releasedatetv')[i].innerHTML=releasedatetv
+                document.getElementsByClassName('releasedatetvL')[i].innerHTML=releasedatetv
+            }
+        })
+        })
+})
+btn1L.addEventListener('click',()=>{
+    btn2L.style.backgroundColor='white'
+    btn2L.style.color='rgb(0, 0, 0)'
+    btn1L.style.backgroundColor='rgb(3,37,65)'
+    btn1L.style.color='aqua'
+    fetch('/latestToday ').then((response)=>{
+        response.json().then((data)=>{
+             for(var i=0;i<20;i++){
+                    const imagetv= data[i].poster_path
+                    document.getElementsByClassName('imagetvL')[i].src='https://image.tmdb.org/t/p/original'+encodeURIComponent(imagetv)
+            }
+            for(var i=0;i<20;i++){
+                const rating=(data[i].vote_average)
+                const a = Math.trunc(rating)
+                const b = rating*10
+                const c = Math.trunc(b%10)
+                document.getElementsByClassName('ratingL')[i].innerHTML=`${a}.${c}`
+            }
+            for(var i=0;i<20;i++){
+                const nametv= data[i].title
+                document.getElementsByClassName('nametvL')[i].innerHTML=nametv
+            }
+            for(var i=0;i<20;i++){
+                const releasedatetv= data[i].release_date
+                document.getElementsByClassName('releasedatetvL')[i].innerHTML=releasedatetv
             }
         })
         })
