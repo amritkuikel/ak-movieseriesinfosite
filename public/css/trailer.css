@@ -61,6 +61,14 @@
     width: 300px;
     border-radius: 10px;
 }
+.play{
+    height: 50px;
+    width: 50px;
+    background-image: url('../assests/play.png');
+    background-size: cover;
+    margin: -120px 0 70px 120px ;
+    position: relative;
+}
 .playholder{
     cursor: pointer;
 }

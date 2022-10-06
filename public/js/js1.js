@@ -1,4 +1,5 @@
 const playholder = document.getElementsByClassName('playholder')
+const play = document.getElementsByClassName('play')
 
 function playmgr(a){
         const btn1TA = document.querySelector('.btn1T')
@@ -39,52 +40,97 @@ function playmgr(a){
         })
     }
 }
- playholder[0].addEventListener('click',()=>{
+ play[0].addEventListener('click',()=>{
     playmgr(0)
  })
- playholder[1].addEventListener('click',()=>{
+ play[1].addEventListener('click',()=>{
     playmgr(1)
  })
- playholder[2].addEventListener('click',()=>{
+ play[2].addEventListener('click',()=>{
     playmgr(2)
  })
- playholder[3].addEventListener('click',()=>{
+ play[3].addEventListener('click',()=>{
     playmgr(3)
  })
- playholder[4].addEventListener('click',()=>{
+ play[4].addEventListener('click',()=>{
     playmgr(4)
  })
- playholder[5].addEventListener('click',()=>{
+ play[5].addEventListener('click',()=>{
     playmgr(5)
  })
- playholder[6].addEventListener('click',()=>{
+ play[6].addEventListener('click',()=>{
     playmgr(6)
  })
- playholder[7].addEventListener('click',()=>{
+ play[7].addEventListener('click',()=>{
     playmgr(7)
  })
- playholder[8].addEventListener('click',()=>{
+ play[8].addEventListener('click',()=>{
     playmgr(8)
  })
- playholder[9].addEventListener('click',()=>{
+ play[9].addEventListener('click',()=>{
     playmgr(9)
  })
- playholder[10].addEventListener('click',()=>{
+ play[10].addEventListener('click',()=>{
     playmgr(10)
  })
- playholder[11].addEventListener('click',()=>{
+ play[11].addEventListener('click',()=>{
     playmgr(11)
  })
- playholder[12].addEventListener('click',()=>{
+ play[12].addEventListener('click',()=>{
     playmgr(12)
  })
- playholder[13].addEventListener('click',()=>{
+ play[13].addEventListener('click',()=>{
     playmgr(13)
  })
- playholder[14].addEventListener('click',()=>{
+ play[14].addEventListener('click',()=>{
     playmgr(14)
  })
 
+ playholder[0].addEventListener('click',()=>{
+   playmgr(0)
+})
+playholder[1].addEventListener('click',()=>{
+   playmgr(1)
+})
+playholder[2].addEventListener('click',()=>{
+   playmgr(2)
+})
+playholder[3].addEventListener('click',()=>{
+   playmgr(3)
+})
+playholder[4].addEventListener('click',()=>{
+   playmgr(4)
+})
+playholder[5].addEventListener('click',()=>{
+   playmgr(5)
+})
+playholder[6].addEventListener('click',()=>{
+   playmgr(6)
+})
+playholder[7].addEventListener('click',()=>{
+   playmgr(7)
+})
+playholder[8].addEventListener('click',()=>{
+   playmgr(8)
+})
+playholder[9].addEventListener('click',()=>{
+   playmgr(9)
+})
+playholder[10].addEventListener('click',()=>{
+   playmgr(10)
+})
+playholder[11].addEventListener('click',()=>{
+   playmgr(11)
+})
+playholder[12].addEventListener('click',()=>{
+   playmgr(12)
+})
+playholder[13].addEventListener('click',()=>{
+   playmgr(13)
+})
+playholder[14].addEventListener('click',()=>{
+   playmgr(14)
+})
 
 const cancel = document.getElementsByClassName('cancel')
 cancel[0].addEventListener('click',()=>{
