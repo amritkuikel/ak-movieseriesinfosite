@@ -43,7 +43,11 @@ nav ul li {
     background-size: cover;
     background-image: url('../assests/search.png');
 }
+
 .dropdown{
+    position: relative;
+}
+.dropdownS{
     position: relative;
 }
 .hover{
@@ -64,6 +68,34 @@ nav ul li {
     margin: 10px 0px 10px 15px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.dropdown-content form{
+    color: black;
+    text-decoration: none;
+    width: 200px;
+    display: block;
+    margin: 10px 0px 10px 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.trendingresult{
+    font-size: small;
+    font-weight: lighter;
+}
+.imgsearch1{
+    height: 25px;
+    width: 25px;
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.dropdown-search{
+    background-color:rgba(255, 255, 255, 0.725);
+}
+.dropdown-search a{
+    min-width: 50vw;
+}
+.dropdown-search form{
+    min-width: 50vw;
+}
 .hover:hover{
     text-decoration: underline;
     text-underline-offset: 4px;
@@ -73,5 +105,5 @@ nav ul li {
     display: block;
 }
 .dropdown-content a:hover{
-    font-size: 22px;
+    letter-spacing: 2px;
 }

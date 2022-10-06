@@ -53,6 +53,13 @@ header{
 #click button:hover{
     color: black;
 }
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    color: black;
+    font-weight: bold;
+  }
 ::placeholder{
     font-weight: bold;
     letter-spacing: 1px;

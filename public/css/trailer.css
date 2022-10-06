@@ -75,7 +75,7 @@
 .playholder2{
     cursor: pointer;
 }
-.playholder:hover{
+.play:hover{
     scale: 1.1;
 }
 .textplay{

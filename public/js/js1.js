@@ -139,3 +139,29 @@ cancel[0].addEventListener('click',()=>{
     document.getElementsByClassName('frame')[0].src=null
 })
 
+const trendingresult = document.getElementsByClassName('trendingresult')
+fetch('/latestToday').then((response)=>{
+   response.json().then((data)=>{
+      for(i=0;i<10;i++){
+         if(data[i].name==null){
+            trendingresult[i].innerHTML=data[i].title
+         }
+         else{
+            trendingresult[i].innerHTML=data[i].name
+         }
+         
+      }
+   })
+})
+
+document.querySelector('.dropdownS').addEventListener('click',()=>{
+   if(document.querySelector('.dropdown-search').style.display == "none"){
+      document.querySelector('.dropdown-search').style.display = "block"
+      document.querySelector('.search').style.backgroundImage= "url('../assests/cancel.png')"
+   }
+   else{
+      document.querySelector('.dropdown-search').style.display = "none"
+      document.querySelector('.search').style.backgroundImage= "url('../assests/search.png')"
+   }
+})
+
