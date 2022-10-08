@@ -41,7 +41,7 @@ nav ul li {
     height: 25px;
     width: 25px;
     background-size: cover;
-    background-image: url('../assests/search.png');
+    background-image: url('../../assests/search.png');
 }
 
 .dropdown{
@@ -88,7 +88,7 @@ nav ul li {
     margin-right: 4px;
 }
 .dropdown-search{
-    background-color:rgba(255, 255, 255, 0.725);
+    background-color:#00FF00;
 }
 .dropdown-search a{
     min-width: 50vw;

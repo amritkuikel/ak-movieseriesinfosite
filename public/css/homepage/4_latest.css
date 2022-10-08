@@ -64,7 +64,7 @@
 .play{
     height: 50px;
     width: 50px;
-    background-image: url('../assests/play.png');
+    background-image: url('../../assests/play.png');
     background-size: cover;
     margin: -120px 0 70px 120px ;
     position: relative;
@@ -114,7 +114,7 @@
     background-size: cover;
     background-color: rgb(42, 114, 54);
     border-radius: 20px;
-    background-image: url(../assests/cancel.png);
+    background-image: url(../../assests/cancel.png);
     position: absolute;
     top: 10px;
     left: 0;

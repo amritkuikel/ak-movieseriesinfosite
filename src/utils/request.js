@@ -2,7 +2,7 @@ const request = require('request')
 const api = 'ec8a74043584d6c450c2962f6a049d97'
 
 const searchMovie = (query,callback)=>{
-    const urlSearchMovie = 'https://api.themoviedb.org/3/search/movie?api_key='+encodeURIComponent(api)+'&query='+encodeURIComponent(query)
+    const urlSearchMovie = 'https://api.themoviedb.org/3/search/multi?api_key=ec8a74043584d6c450c2962f6a049d97&language=en-US&query='+encodeURIComponent(api)+'&query='+encodeURIComponent(query)
     request({url:urlSearchMovie},(error,response)=>{
     const json =JSON.parse(response.body)
     callback(undefined,json.results)

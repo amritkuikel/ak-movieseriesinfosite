@@ -31,6 +31,9 @@ hbs.registerPartials(partialDir)
 app.get('/',(req,res)=>{
     res.render('homepage')
 })
+app.get('/',(req,res)=>{
+    res.render('homepage')
+})
 app.get('/movie',(req,res)=>{
     res.render('movie')
 })
