@@ -6,8 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOVIE TV Site</title>
     <link rel="shortcut icon" href="/assests/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/homepage/1_navigation.css">
+    <link rel="stylesheet" href="css/infopage/1_vicenavigation.css">
+    <link rel="stylesheet" href="css/infopage/2_header.css">
+    <link rel="stylesheet" href="css/infopage/3_castfact.css">
+    <link rel="stylesheet" href="css/homepage/6_footer.css">
 </head>
 <body>
-    
+    {{>homepage_1_navigation}}
+    {{>infopage_1_vicenavigation}}
+    {{>infopage_2_header}}
+    {{>infopage_3_castfact}}
+  
+    {{!-- current season section  --}}
+        <div class="currentseasontxt">Current Season</div>
+        <div class="pictext">
+            <div class="pic"></div>
+            <div class="txtseason">
+                <div class="txtseason1"></div>
+                <div class="txtseason2"></div>
+                <div class="txtseason3"></div>
+            </div>
+        </div>
+    {{!-- current season section  --}}
+
+    {{>homepage_6_footer}}
+    <script>
+        const id = {{id}}
+    </script>
+
+    <script src="js/homepage/1_navigation.js"></script>
+    <script src="js/infopage/1_vicenavigation.js"></script>
+    <script src="js/infopage/3_castfact.js"></script>
+    <script src="js/infopage/2_header.js"></script>
 </body>
 </html>

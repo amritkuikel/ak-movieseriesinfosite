@@ -2,7 +2,7 @@ header{
     background-size: cover;
     background-position: center;
     height: 38vh;
-    margin:0vh 10vh 0vh 10vh;
+    margin:65px 10vh 0vh 10vh;
 }
 .overlay{
     background-color: rgba(5, 69, 88, 0.8);

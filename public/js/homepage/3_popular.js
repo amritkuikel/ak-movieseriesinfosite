@@ -58,4 +58,13 @@ fetch('/popularTv').then((response)=>{
         })
        
     })
+const scrollitem = document.getElementsByClassName('scrollitem')
+scrollitem[0].addEventListener('click',()=>{
+    fetch('/popularTv').then((response)=>{
+        response.json().then((data)=>{
+            const id = data[0].id
+            document.location.href = `/infopage?id=${id}`;
+        })
+        })
     
+})

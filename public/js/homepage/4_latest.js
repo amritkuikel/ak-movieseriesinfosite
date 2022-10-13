@@ -100,7 +100,7 @@ btn1T.addEventListener('click',()=>{
                 }  
                 const nametvT= data[i].name
                 document.getElementsByClassName('nametvT')[i].innerHTML=nametvT 
-                vidinfo(data,i)
+                vidinfoTv(data,i)
             }
             
         })

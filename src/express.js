@@ -13,6 +13,8 @@ const vidinfoM = utils.vidinfoM
 const popularMovie2 = utils.popularMovie2
 const latestToday = utils.latestToday
 const latestWeek = utils.latestWeek
+const searchTv = utils.searchTv
+const castTv = utils.castTv
 const port = process.env.PORT || 3000
 
 const app = express()
@@ -31,17 +33,10 @@ hbs.registerPartials(partialDir)
 app.get('/',(req,res)=>{
     res.render('homepage')
 })
-app.get('/',(req,res)=>{
-    res.render('homepage')
-})
-app.get('/movie',(req,res)=>{
-    res.render('movie')
-})
-app.get('/tv',(req,res)=>{
-    res.render('tv')
-})
-app.get('/person',(req,res)=>{
-    res.render('person')
+app.get('/infopage',(req,res)=>{
+    res.render('infopage',{
+        id:`${req.query.id}`
+    })
 })
 app.get('/searchMovie',(req,res)=>{
     searchMovie(req.query.searchTerm,(error,response)=>{
@@ -93,7 +88,16 @@ app.get('/latestWeek',(req,res)=>{
         res.send(response)
     })
 })
-
+app.get('/tv',(req,res)=>{
+    searchTv(req.query.id,(error,response)=>{
+        res.send(response)
+    })
+})
+app.get('/castTv',(req,res)=>{
+    castTv(req.query.id,(error,response)=>{
+        res.send(response)
+    })
+})
 
 app.listen(port,()=>{
     console.log('server initiated')

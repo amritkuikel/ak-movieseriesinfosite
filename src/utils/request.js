@@ -71,4 +71,18 @@ const latestWeek = (callback)=>{
     callback(undefined,json.results)
 })
 }
-module.exports = {searchMovie,popularMovie,popularTv,nowPlayingMovie,popularTv2,vidinfo,popularMovie2,vidinfoM,latestToday,latestWeek}
+const searchTv = (id,callback)=>{
+    const urlsearchtv = 'https://api.themoviedb.org/3/tv/'+encodeURIComponent(id)+'?api_key=ec8a74043584d6c450c2962f6a049d97&language=en-US'
+    request({url:urlsearchtv},(error,response)=>{
+    const json =JSON.parse(response.body)
+    callback(undefined,json)
+})
+}
+const castTv = (id,callback)=>{
+    const urlcasttv = 'https://api.themoviedb.org/3/tv/'+encodeURIComponent(id)+'/aggregate_credits?api_key=ec8a74043584d6c450c2962f6a049d97&language=en-US'
+    request({url:urlcasttv},(error,response)=>{
+    const json =JSON.parse(response.body)
+    callback(undefined,json)
+})
+}
+module.exports = {searchMovie,popularMovie,popularTv,nowPlayingMovie,popularTv2,vidinfo,popularMovie2,vidinfoM,latestToday,latestWeek,searchTv,castTv}

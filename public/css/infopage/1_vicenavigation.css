@@ -1,0 +1,46 @@
+.dropdownI{
+    padding-top: 65px;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+.individualDropdown{
+    width: 12vw;
+    padding: 2px 5px 0 5px;
+    position: relative;
+}
+.hoverI{
+    padding: 10px 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    font-weight: 300px;
+    cursor: pointer;
+}
+.dropdownContentsI{
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: none;
+    position: absolute;
+}
+.dropdownContent{
+    padding: 5px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-weight: 250;
+    
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, .3); 
+  }
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.511); 
+    border-radius: 5px;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.599); 
+  }
