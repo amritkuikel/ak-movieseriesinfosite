@@ -14,9 +14,13 @@ const popularMovie2 = utils.popularMovie2
 const latestToday = utils.latestToday
 const latestWeek = utils.latestWeek
 const searchTv = utils.searchTv
+const searchMovi = utils.searchMovi
+const creditMovi = utils.creditMovi
 const castTv = utils.castTv
 const vidTv = utils.vidTv
 const picTv = utils.picTv
+const vidMovie = utils.vidMovie
+const picMovie = utils.picMovie
 const port = process.env.PORT || 3000
 
 const app = express()
@@ -95,6 +99,16 @@ app.get('/tv',(req,res)=>{
         res.send(response)
     })
 })
+app.get('/movie',(req,res)=>{
+    searchMovi(req.query.id,(error,response)=>{
+        res.send(response)
+    })
+})
+app.get('/creditmovie',(req,res)=>{
+    creditMovi(req.query.id,(error,response)=>{
+        res.send(response)
+    })
+})
 app.get('/castTv',(req,res)=>{
     castTv(req.query.id,(error,response)=>{
         res.send(response)
@@ -107,6 +121,16 @@ app.get('/vidTv',(req,res)=>{
 })
 app.get('/picTv',(req,res)=>{
     picTv(req.query.id,(error,response)=>{
+        res.send(response)
+    })
+})
+app.get('/vidMovie',(req,res)=>{
+    vidMovie(req.query.id,(error,response)=>{
+        res.send(response)
+    })
+})
+app.get('/picMovie',(req,res)=>{
+    picMovie(req.query.id,(error,response)=>{
         res.send(response)
     })
 })
