@@ -15,6 +15,8 @@ const latestToday = utils.latestToday
 const latestWeek = utils.latestWeek
 const searchTv = utils.searchTv
 const castTv = utils.castTv
+const vidTv = utils.vidTv
+const picTv = utils.picTv
 const port = process.env.PORT || 3000
 
 const app = express()
@@ -95,6 +97,16 @@ app.get('/tv',(req,res)=>{
 })
 app.get('/castTv',(req,res)=>{
     castTv(req.query.id,(error,response)=>{
+        res.send(response)
+    })
+})
+app.get('/vidTv',(req,res)=>{
+    vidTv(req.query.id,(error,response)=>{
+        res.send(response)
+    })
+})
+app.get('/picTv',(req,res)=>{
+    picTv(req.query.id,(error,response)=>{
         res.send(response)
     })
 })

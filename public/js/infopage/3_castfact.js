@@ -1,4 +1,4 @@
-fetch('/castTv?id=113988').then((response)=>{
+fetch(`/castTv?id=${id}`).then((response)=>{
     response.json().then((data)=>{
         for(i=0;i<5;i++){
             const imgurl = 'https://image.tmdb.org/t/p/original'+encodeURIComponent(data.cast[i].profile_path)
@@ -9,7 +9,7 @@ fetch('/castTv?id=113988').then((response)=>{
         }
     })
 })
-fetch('/tv?id=113988').then((response)=>{
+fetch(`/tv?id=${id}`).then((response)=>{
     response.json().then((data)=>{
         document.getElementsByClassName('link')[0].href=data.homepage
         if(data.in_production==false){

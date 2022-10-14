@@ -85,4 +85,18 @@ const castTv = (id,callback)=>{
     callback(undefined,json)
 })
 }
-module.exports = {searchMovie,popularMovie,popularTv,nowPlayingMovie,popularTv2,vidinfo,popularMovie2,vidinfoM,latestToday,latestWeek,searchTv,castTv}
+const vidTv = (id,callback)=>{
+    const urlvidtv = 'https://api.themoviedb.org/3/tv/'+encodeURIComponent(id)+'/videos?api_key=ec8a74043584d6c450c2962f6a049d97'
+    request({url:urlvidtv},(error,response)=>{
+    const json =JSON.parse(response.body)
+    callback(undefined,json)
+})
+}
+const picTv = (id,callback)=>{
+    const urlpictv = 'https://api.themoviedb.org/3/tv/'+encodeURIComponent(id)+'/images?api_key=ec8a74043584d6c450c2962f6a049d97'
+    request({url:urlpictv},(error,response)=>{
+    const json =JSON.parse(response.body)
+    callback(undefined,json)
+})
+}
+module.exports = {searchMovie,popularMovie,popularTv,nowPlayingMovie,popularTv2,vidinfo,popularMovie2,vidinfoM,latestToday,latestWeek,searchTv,castTv,vidTv,picTv}

@@ -1,4 +1,4 @@
-fetch('/tv?id=113988').then((response)=>{
+fetch(`/tv?id=${id}`).then((response)=>{
     response.json().then((data)=>{
         const url = 'https://image.tmdb.org/t/p/original'+encodeURIComponent(data.backdrop_path)
         document.getElementsByClassName('header_imageI')[0].style.backgroundImage=`url('${url}')`

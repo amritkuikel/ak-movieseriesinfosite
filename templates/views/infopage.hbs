@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/infopage/1_vicenavigation.css">
     <link rel="stylesheet" href="css/infopage/2_header.css">
     <link rel="stylesheet" href="css/infopage/3_castfact.css">
+    <link rel="stylesheet" href="css/infopage/4_currentseason.css">
+    <link rel="stylesheet" href="css/infopage/5_media.css">
     <link rel="stylesheet" href="css/homepage/6_footer.css">
 </head>
 <body>
@@ -17,18 +19,30 @@
     {{>infopage_1_vicenavigation}}
     {{>infopage_2_header}}
     {{>infopage_3_castfact}}
-  
-    {{!-- current season section  --}}
-        <div class="currentseasontxt">Current Season</div>
-        <div class="pictext">
-            <div class="pic"></div>
-            <div class="txtseason">
-                <div class="txtseason1"></div>
-                <div class="txtseason2"></div>
-                <div class="txtseason3"></div>
-            </div>
-        </div>
-    {{!-- current season section  --}}
+    {{>infopage_4_currentseason}}
+ 
+    	{{!-- media section --}}
+                <div class="textmedia">
+                    <div class="mediatext">Media</div>
+                    <div class="vidtext">Videos</div>
+                    <div class="backtext">Backdrops</div>
+                    <div class="postext">Posters</div>
+                </div>
+                <div class="media">
+                    <div class="vidmedia">
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                    </div>
+                </div>
+        {{!-- media section --}}
 
     {{>homepage_6_footer}}
     <script>
@@ -37,7 +51,9 @@
 
     <script src="js/homepage/1_navigation.js"></script>
     <script src="js/infopage/1_vicenavigation.js"></script>
-    <script src="js/infopage/3_castfact.js"></script>
     <script src="js/infopage/2_header.js"></script>
+    <script src="js/infopage/3_castfact.js"></script>
+    <script src="js/infopage/4_currentseason.js"></script>
+    <script src="js/infopage/5_media.js"></script>
 </body>
 </html>

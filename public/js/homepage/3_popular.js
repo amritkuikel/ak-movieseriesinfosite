@@ -58,13 +58,80 @@ fetch('/popularTv').then((response)=>{
         })
        
     })
-const scrollitem = document.getElementsByClassName('scrollitem')
-scrollitem[0].addEventListener('click',()=>{
-    fetch('/popularTv').then((response)=>{
-        response.json().then((data)=>{
-            const id = data[0].id
-            document.location.href = `/infopage?id=${id}`;
-        })
-        })
-    
-})
+    const scrollitem = document.getElementsByClassName('scrollitem')
+    function fetchingdata(a){
+        const btn = document.querySelector('.btn1')
+        if(btn.style.color=="rgb(0, 0, 0)"){
+            fetch('/nowPlayingMovie').then((response)=>{
+                response.json().then((data)=>{
+                    const id = data[a].id
+                    document.location.href = `/infopage?id=${id}`;
+                })
+            })
+        }
+        else{
+            fetch('/popularTv').then((response)=>{
+                response.json().then((data)=>{
+                    const id = data[a].id
+                    document.location.href = `/infopage?id=${id}`;
+                })
+            })
+        }
+    }
+    scrollitem[0].addEventListener('click',()=>{
+        fetchingdata(0)
+    })
+    scrollitem[1].addEventListener('click',()=>{
+        fetchingdata(1)
+    })
+    scrollitem[2].addEventListener('click',()=>{
+        fetchingdata(2)
+    })
+    scrollitem[3].addEventListener('click',()=>{
+        fetchingdata(3)
+    })
+    scrollitem[4].addEventListener('click',()=>{
+        fetchingdata(4)
+    })
+    scrollitem[5].addEventListener('click',()=>{
+        fetchingdata(5)
+    })
+    scrollitem[6].addEventListener('click',()=>{
+        fetchingdata(6)
+    })
+    scrollitem[7].addEventListener('click',()=>{
+        fetchingdata(7)
+    })
+    scrollitem[8].addEventListener('click',()=>{
+        fetchingdata(8)
+    })
+    scrollitem[9].addEventListener('click',()=>{
+        fetchingdata(9)
+    })
+    scrollitem[10].addEventListener('click',()=>{
+        fetchingdata(10)
+    })
+    scrollitem[11].addEventListener('click',()=>{
+        fetchingdata(11)
+    })
+    scrollitem[12].addEventListener('click',()=>{
+        fetchingdata(12)
+    })
+    scrollitem[13].addEventListener('click',()=>{
+        fetchingdata(13)
+    })
+    scrollitem[14].addEventListener('click',()=>{
+        fetchingdata(14)
+    })
+    scrollitem[15].addEventListener('click',()=>{
+        fetchingdata(15)
+    })
+    scrollitem[16].addEventListener('click',()=>{
+        fetchingdata(16)
+    })
+    scrollitem[17].addEventListener('click',()=>{
+        fetchingdata(17)
+    })
+    scrollitem[19].addEventListener('click',()=>{
+        fetchingdata(19)
+    })

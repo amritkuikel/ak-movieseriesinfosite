@@ -1,0 +1,41 @@
+.currentseasontxt{
+    margin: 3vh 0 2vh 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.pictext{
+    display: flex;
+    align-items: center;
+    margin: 0 0 3vh 5vw;
+    border: 1px solid #8888884a;
+    box-shadow: 2px 2px 2px 2px #8888884a;
+    border-radius: 5px;
+    width: 67vw;
+}
+.pic{
+    height: 27vh;
+    width: 15vw;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+.txtseason{
+    margin-left: 2vw;
+    font-family: 'Times New Roman', Times, serif;
+}   
+.txtseason1{
+    font-size: x-large;
+    font-weight: bolder;
+    margin-bottom: .5vh;
+}
+.txtseason2{
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 3vh;
+}
+.txtseason3{
+    font-size: medium;
+    font-weight: 150;
+    max-width: 95%;
+}

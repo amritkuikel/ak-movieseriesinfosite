@@ -1,7 +1,6 @@
 function drop (a){
     if(document.getElementsByClassName('dropdownContentsI')[a].style.display=='none'){
         document.getElementsByClassName('dropdownContentsI')[a].style.display='block'
-        // document.getElementsByClassName('hoverI').style.textDecoration='underline 5px solid rgb(1,130,171)'
         if(a==0){
             document.getElementsByClassName('dropdownContentsI')[1].style.display='none'
             document.getElementsByClassName('dropdownContentsI')[2].style.display='none'
