@@ -44,6 +44,9 @@ app.get('/infopage',(req,res)=>{
         id:`${req.query.id}`
     })
 })
+app.get('/searchpage',(req,res)=>{
+    res.send('search page')
+})
 app.get('/searchMovie',(req,res)=>{
     searchMovie(req.query.searchTerm,(error,response)=>{
         res.send(response)
