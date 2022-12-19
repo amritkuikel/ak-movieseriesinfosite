@@ -1,0 +1,135 @@
+.body{
+    margin: 0;
+}
+.containerT{
+    background-color: rgba(3, 25, 43, 0.8);
+}
+.overlayT{
+    margin:0vh 10vh 0vh 10vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.topT{
+    display: flex;
+    padding: 30px 0px 20px 37px;
+}
+.topT .txtT{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: white;
+}
+.btnT{
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: light;
+    margin-left: 4vh;
+    border: 1px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.btn1T{
+    background-color: rgb(7, 134, 98);
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+}
+.btn2T{
+    background-color: rgba(243, 229, 229, 0);
+    color: white;
+    border-radius: 30px;
+}
+.scrollerT{
+     overflow: auto;
+    white-space: nowrap; 
+    margin: 0px 37px 0px 37px ;
+    height: 42vh;
+    display: grid;
+    grid-template-columns:auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto  ;
+}
+.scrollitemT{
+    display: inline-block;  
+    margin-right: 2vh;
+    background: transparent;
+}
+.imagetvT{
+    background-size: contain;
+    background-color: rgba(0, 255, 255, 0);
+    height: 25vh;
+    width: 300px;
+    border-radius: 10px;
+}
+.play{
+    height: 50px;
+    width: 50px;
+    background-image: url('../../assests/play.png');
+    background-size: cover;
+    margin: -120px 0 70px 120px ;
+    position: relative;
+}
+.playholder{
+    cursor: pointer;
+}
+.playholder2{
+    cursor: pointer;
+}
+.play:hover{
+    scale: 1.1;
+}
+.textplay{
+    background-color: rgb(3, 61, 29);
+    color: white;
+    font-size: large;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0px 0 0 90px;
+    padding: 0px 5px 5px 5px;
+    border: 2px solid black;
+    display: inline;
+}
+.nametvT{
+    margin: 10px 0 10px 0px;
+    color: white;
+    font-size: large;
+    font-weight: bolder; 
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    cursor: pointer;
+}
+.vidinfo{
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.cancel{
+    display: none;
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    background-color: rgb(42, 114, 54);
+    border-radius: 20px;
+    background-image: url(../../assests/cancel.png);
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+.cancelframe{
+    margin-left: 130px;
+    margin-top: -650px;
+    position: relative; 
+    background-color: rgba(230, 230, 236, 0);
+}
+.frame{
+    display: none;
+    background-color: brown;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+}

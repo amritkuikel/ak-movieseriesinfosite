@@ -1,0 +1,50 @@
+.textmedia{
+    margin: 3vh 0 3vh 5vw;
+    display: flex;
+    align-items: center;
+}
+.mediatext{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.vidtext{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
+    margin-left: 5vw;
+    text-decoration: underline 2px solid black;
+    text-underline-offset: 4px;
+}
+.backtext{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
+    margin-left: 3vw;
+    text-underline-offset: 4px;
+}
+.postext{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
+    margin-left: 3vw;
+    text-underline-offset: 4px;
+}
+.media{
+    margin: 3vh 0 3vh 5vw;
+    border-radius: 5px;
+    width: 68vw;
+    height: 40vh;
+    overflow: scroll;
+}
+.vidmedia{
+    height: 38.7vh;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+}
+.individualmedia{
+    width: 550px;
+    background-position: center;
+    background-size: cover;
+}

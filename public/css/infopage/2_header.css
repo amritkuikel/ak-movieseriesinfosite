@@ -1,0 +1,102 @@
+.header_imageI{
+    height: 70vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.headerI{
+    height: 70vh;
+    width: 100%;
+    background-color: rgba(5, 69, 88, 0.5);
+    display: flex;
+}
+.posterI{
+    height: 60vh;
+    width: 22vw;
+    background-position: center;
+    background-size: cover;
+    margin: 5vh 5vw 5vh 5vw;
+}
+.txtI{
+    height: 60vh;
+    width: 60vw;;
+    margin: 5vh 0;
+}
+.namedate{
+    width: 100%;
+    margin-top: 10vh;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+.rategenre{
+    display: flex;
+    margin-top: 2px;
+}
+.rate{
+    width: auto;
+    color: rgb(78, 71, 71);
+    border: 2px solid rgb(78, 71, 71);
+    padding: 2px;
+}
+.genre{
+    color: white;;
+    margin-left:4px ;
+    padding: 4px;
+}
+.scoretrailer{
+    display: flex;
+    color: white;
+    font-weight: medium;
+    font-size: large;
+    margin-top: 3vh;
+    align-items: center;
+}
+.score{
+    border: 5px solid chartreuse;
+    border-radius: 30px;
+    height: 8vh;
+    width: 8vh;
+    padding: 15px 10px;
+}
+.txtscore{
+    margin-left: 2vh;
+}
+.txtscore1{
+    margin-bottom: .1vh;
+}
+.txtscore2{
+    margin-top: .1vh;
+}
+.trailer{
+    margin-left: 2vh;
+}
+.overview{
+    margin-top: 3vh;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+}
+.overviewtxt{
+    margin-top: 1vh;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+}
+.creator{
+    margin-top: 3vh;
+    color: white;
+    display: flex;
+}
+.subcreator :nth-child(1){
+    margin-right: 4vw;
+}
+.creatorname{
+    color: white;
+}
+.txtcreator{
+    color: white;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE TV Site</title>
+    <link rel="shortcut icon" href="/assests/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/homepage/1_navigation.css">
+    <link rel="stylesheet" href="css/infopage/1_vicenavigation.css">
+    <link rel="stylesheet" href="css/infopage/2_header.css">
+    <link rel="stylesheet" href="css/infopage/3_castfact.css">
+    <link rel="stylesheet" href="css/infopage/4_currentseason.css">
+    <link rel="stylesheet" href="css/infopage/5_media.css">
+    <link rel="stylesheet" href="css/homepage/6_footer.css">
+</head>
+<body>
+    {{>homepage_1_navigation}}
+    {{>infopage_1_vicenavigation}}
+    {{>infopage_2_header}}
+    {{>infopage_3_castfact}}
+    {{>infopage_4_currentseason}}
+ 
+    	{{!-- media section --}}
+                <div class="textmedia">
+                    <div class="mediatext">Media</div>
+                    <div class="vidtext">Videos</div>
+                    <div class="backtext">Backdrops</div>
+                    <div class="postext">Posters</div>
+                </div>
+                <div class="media">
+                    <div class="vidmedia">
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                        <div class="individualmedia"></div>
+                    </div>
+                </div>
+        {{!-- media section --}}
+
+    {{>homepage_6_footer}}
+    <script>
+        const id = {{id}}
+    </script>
+
+    <script src="js/homepage/1_navigation.js"></script>
+    <script src="js/infopage/1_vicenavigation.js"></script>
+    <script src="js/infopage/2_header.js"></script>
+    <script src="js/infopage/3_castfact.js"></script>
+    <script src="js/infopage/4_currentseason.js"></script>
+    <script src="js/infopage/5_media.js"></script>
+</body>
+</html>
